@@ -1,0 +1,22 @@
+<table id = "friends_table">
+  <thead>
+    <tr>
+      <td>First Name: </td>
+      <td>Last Name: </td>
+      <td>Favorite Language: </td>
+      <td>Birthday: </td>
+      <td>Actions: </td>
+    </tr>
+  </thead>
+
+  <tr ng-repeat = "friend in friends">
+    <td>{{friend.first_name}}</td>
+    <td>{{friend.last_name}}</td>
+    <td>{{friend.favoriteLanguage}}</td>
+    <td ng-bind="friend.birthday | date:'MMMM dd, yyyy'"> </td>
+
+    
+
+    <td><a href="#!/show/{{friend._id}}">Show</a> <a href="#!/edit/{{friend._id}}">Edit</a><button ng-click="deleteFriend(friend._id)">Delete</button></td>
+  </tr>
+</table>

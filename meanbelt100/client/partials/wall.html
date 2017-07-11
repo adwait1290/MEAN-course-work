@@ -1,0 +1,20 @@
+<h1>Questions and Answers</h1>
+
+
+<h2>Hi {{user.name}} </h2>
+
+<a href="#!/new_question">Add a Question </a> 
+
+
+<table>
+<thead>
+	<tr>
+		<td>Question</td>
+		<td>Answers</td>
+		<td>Action</td>
+	</tr>
+</thead>
+	<tr ng-repeat="question in questions">
+		<td>{{question.content}}</td>
+		<td>{{question.answers.length}}</td>
+		<td><a href="#!/questions/{{question._id}}">Show</a> <a href="#!/questions/answer/{{question._id}}">Answer</a>

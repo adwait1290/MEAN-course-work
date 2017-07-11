@@ -1,0 +1,12 @@
+<a href="#!/wall">Home</a>
+
+<a href="#!/questions/{{question._id}}">Go back to Question</a>
+<h1> {{question.content}}</h1>
+<h3> {{question.description}} </h3>
+
+
+<form>
+<label>Your Answer</label><input type="textfield" ng-model="newAnswer.content" />
+<label>Supporting details to your answer(Optional)</label><input type="textfield" ng-model="newAnswer.support" />
+<a href="#!/wall">Cancel</a><button ng-click="addAnswer(newAnswer, question._id)">Submit</button>
+</form>

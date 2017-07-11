@@ -1,0 +1,21 @@
+<h1> Products </h1>
+<form>
+	<label>Name: <input type="text" ng-model="newProduct.name"></label>
+	<label>Description: <input type="text" ng-model="newProduct.description"></label>
+	<label>Quantity: <input type="number" ng-model="newProduct.quantity"></label>
+	<button ng-click="addProduct(newProduct)">Add Product</button>
+</form>
+
+<table>	
+	<tr>
+		<th>Product Name</th>
+		<th>Description</th>
+		<th>Quantity</th>
+	</tr>
+	<tr ng-repeat="product in products">
+		<td>{{product.name}}</td>
+		<td ng-bind="product.description"></td>
+		<td>{{product.quantity}}</td>
+		<td><button ng-click="deleteProduct(product._id)">Delete</button></td>
+	</tr>
+</table>

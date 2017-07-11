@@ -1,0 +1,16 @@
+<a href="#!/wall">Home</a> HELLO
+<a href="#!/questions/answer/{{question._id}}">Answer the Question</a>
+
+<h1> {{question.content}}</h1>
+<h3> {{question.description}} </h3>
+<h5> {{question.user.name}} </h5>
+
+
+
+<table>
+
+<tr ng-repeat="answer in question.answers">
+<td>{{ answer._user.name }} <br>{{answer.content}}</td>
+<td>Likes: {{answer.likes}}<button ng-click="addLike(answer._id)">Like!</button></td>
+</tr>
+</table>
